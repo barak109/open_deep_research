@@ -163,8 +163,8 @@ def human_feedback(state: ReportState, config: RunnableConfig) -> Command[Litera
     topic = state["topic"]
     sections = state['sections']
     sections_str = "\n\n".join(
-        f"**Section: {section.name}**\n"
-        f"\nDescription: {section.description}\n"
+        f"**Section: {section.name}**       \n"
+        f"Description: {section.description}\n"
         f"Research needed: {'Yes' if section.research else 'No'}\n"
         for section in sections
     )
@@ -172,8 +172,8 @@ def human_feedback(state: ReportState, config: RunnableConfig) -> Command[Litera
     # Get feedback on the report plan from interrupt
     interrupt_message = f"""### Please provide feedback on the following report plan: ### 
                         \n\n{sections_str}\n
-                        \n**Does the report plan meet your needs?**\n
-                        \n**If not, please provide specific feedback so we can improve the plan.**"""
+                        \n**Does the report plan meet your needs?**     
+                        **If not, please provide specific feedback so we can improve the plan.**"""
     
     feedback = interrupt(interrupt_message)
 
