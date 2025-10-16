@@ -66,7 +66,7 @@ Integration guidelines:
 - Combine related concepts rather than separating them
 - CRITICAL: Every section MUST be directly relevant to the main topic
 - Avoid tangential or loosely related sections that don't directly address the core topic
-- If any diagram content is generated, convert and present it strictly in Mermaid markdown syntax, verify and validate its syntax and ensure compliance with mermaid.parse() before returning. Output only a valid Mermaid code block, with no extra text or commentary.
+- If any diagram content is generated, convert and present it strictly in Mermaid markdown syntax, Return only a valid Mermaid code block (must pass mermaid.parse()). Wrap all `subgraph` titles in double quotes (e.g. `subgraph "title (data)"`). Wrap any `node`/`edge`/`link` labels with special characters in double quotes. Inside quoted labels, encode only double quotes as `&quot;`
 
 Before submitting, review your structure to ensure it has no redundant sections and follows a logical flow.
 </Task>
