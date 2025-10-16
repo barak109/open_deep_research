@@ -66,7 +66,7 @@ Integration guidelines:
 - Combine related concepts rather than separating them
 - CRITICAL: Every section MUST be directly relevant to the main topic
 - Avoid tangential or loosely related sections that don't directly address the core topic
-- If any diagram content is generated, convert and present it strictly in Mermaid markdown syntax, Return only a valid Mermaid code block (must pass mermaid.parse()). Wrap all `subgraph` titles in double quotes (e.g. `subgraph "title (data)"`). Wrap any `node`/`edge`/`link` labels with special characters in double quotes. Inside quoted labels, encode only double quotes as `&quot;`
+- If any diagram content is generated, present it strictly as a Mermaid code block that must pass mermaid.parse(). Wrap all `subgraph` titles in double quotes (e.g. `subgraph "title (data)"`). Wrap any `node`/`edge`/`link` labels with special characters in double quotes. Inside quoted labels, encode only double quotes as `&quot;`
 
 Before submitting, review your structure to ensure it has no redundant sections and follows a logical flow.
 </Task>
@@ -395,6 +395,7 @@ You are a researcher responsible for completing a specific section of a report.
      - End with a "### Sources" subsection (H3 level with ###) containing a numbered list of URLs used
      - Use clear, concise language with bullet points where appropriate
      - Include relevant facts, statistics, or expert opinions
+     - If any diagram content is generated, present it strictly as a Mermaid code block that must pass mermaid.parse(). Wrap all `subgraph` titles in double quotes (e.g. `subgraph "title (data)"`). Wrap any `node`/`edge`/`link` labels with special characters in double quotes. Inside quoted labels, encode only double quotes as `&quot;`
 
 Example format for content:
 ```
