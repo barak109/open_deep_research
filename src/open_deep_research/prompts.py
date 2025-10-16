@@ -126,6 +126,7 @@ section_writer_instructions = """Write one section of a research report.
 - Use simple, clear language
 - Use short paragraphs (2-3 sentences max)
 - Use ## for section title (Markdown format)
+- If any diagram content is generated, present it strictly as a Mermaid code block that must pass mermaid.parse(). Wrap all `subgraph` titles in double quotes (e.g. `subgraph "title (data)"`). Wrap any `node`/`edge`/`link` labels with special characters in double quotes. Inside quoted labels, encode only double quotes as `&quot;`
 </Writing Guidelines>
 
 <Citation Rules>
@@ -259,6 +260,7 @@ For Conclusion/Summary:
 - For conclusion: 100-150 word limit, ## for section title, only ONE structural element at most, no sources section
 - Markdown format
 - Do not include word count or any preamble in your response
+- If any diagram content is generated, present it strictly as a Mermaid code block that must pass mermaid.parse(). Wrap all `subgraph` titles in double quotes (e.g. `subgraph "title (data)"`). Wrap any `node`/`edge`/`link` labels with special characters in double quotes. Inside quoted labels, encode only double quotes as `&quot;`
 </Quality Checks>"""
 
 
