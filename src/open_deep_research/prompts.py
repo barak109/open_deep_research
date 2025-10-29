@@ -61,12 +61,12 @@ Each section should have the fields:
 - Content - The content of the section, which you will leave blank for now.
 
 Integration guidelines:
-- Include examples and implementation details within main topic sections, not as separate sections
-- Ensure each section has a distinct purpose with no content overlap
-- Combine related concepts rather than separating them
-- CRITICAL: Every section MUST be directly relevant to the main topic
-- Avoid tangential or loosely related sections that don't directly address the core topic
-- If any diagram content is generated, present it strictly as a Mermaid code block that must pass mermaid.parse(). Wrap all `subgraph` titles in double quotes (e.g. `subgraph "title (data)"`). Wrap any `node`/`edge`/`link` labels with special characters in double quotes. Inside quoted labels, encode only double quotes as `&quot;`
+ Include examples and implementation details within main topic sections, not as separate sections
+ Ensure each section has a distinct purpose with no content overlap
+ Combine related concepts rather than separating them
+ CRITICAL: Every section MUST be directly relevant to the main topic
+ Avoid tangential or loosely related sections that don't directly address the core topic
+ If any diagram content is generated, Return only a valid Mermaid code block (must pass mermaid.parse()). Before generating a diagram, first identify its specific type. Then, strictly apply only the syntax appropriate for that single type. Wrap all `subgraph` titles in double quotes (e.g. `subgraph "title (data)"`). Wrap any `node`/`edge`/`link` labels with special characters in double quotes. Inside quoted labels, encode only double quotes as `&quot;`. Use pipe link syntax with no extra spaces: `A -->|"label"| B`, `A -.->|"label"| B`, `A ==>|"label"| B`. Do not insert spaces before or after the first pipe; no leading/trailing spaces inside the label. Make to use only valid links . Place all Mermaid comments (`%%`) at the start of a new line.
 
 Before submitting, review your structure to ensure it has no redundant sections and follows a logical flow.
 </Task>
@@ -120,13 +120,13 @@ section_writer_instructions = """Write one section of a research report.
 </Task>
 
 <Writing Guidelines>
-- If existing section content is not populated, write from scratch
-- If existing section content is populated, synthesize it with the source material
-- Strict 150-200 word limit
-- Use simple, clear language
-- Use short paragraphs (2-3 sentences max)
-- Use ## for section title (Markdown format)
-- If any diagram content is generated, present it strictly as a Mermaid code block that must pass mermaid.parse(). Wrap all `subgraph` titles in double quotes (e.g. `subgraph "title (data)"`). Wrap any `node`/`edge`/`link` labels with special characters in double quotes. Inside quoted labels, encode only double quotes as `&quot;`
+ If existing section content is not populated, write from scratch
+ If existing section content is populated, synthesize it with the source material
+ Strict 150-200 word limit
+ Use simple, clear language
+ Use short paragraphs (2-3 sentences max)
+ Use ## for section title (Markdown format)
+ If any diagram content is generated, Return only a valid Mermaid code block (must pass mermaid.parse()). Before generating a diagram, first identify its specific type. Then, strictly apply only the syntax appropriate for that single type. Wrap all `subgraph` titles in double quotes (e.g. `subgraph "title (data)"`). Wrap any `node`/`edge`/`link` labels with special characters in double quotes. Inside quoted labels, encode only double quotes as `&quot;`. Use pipe link syntax with no extra spaces: `A -->|"label"| B`, `A -.->|"label"| B`, `A ==>|"label"| B`. Do not insert spaces before or after the first pipe; no leading/trailing spaces inside the label. Make to use only valid links . Place all Mermaid comments (`%%`) at the start of a new line.
 </Writing Guidelines>
 
 <Citation Rules>
@@ -256,11 +256,11 @@ For Conclusion/Summary:
 </Task>
 
 <Quality Checks>
-- For introduction: 50-100 word limit, # for report title, no structural elements, no sources section
-- For conclusion: 100-150 word limit, ## for section title, only ONE structural element at most, no sources section
-- Markdown format
-- Do not include word count or any preamble in your response
-- If any diagram content is generated, present it strictly as a Mermaid code block that must pass mermaid.parse(). Wrap all `subgraph` titles in double quotes (e.g. `subgraph "title (data)"`). Wrap any `node`/`edge`/`link` labels with special characters in double quotes. Inside quoted labels, encode only double quotes as `&quot;`
+ For introduction: 50-100 word limit, # for report title, no structural elements, no sources section
+ For conclusion: 100-150 word limit, ## for section title, only ONE structural element at most, no sources section
+ Markdown format
+ Do not include word count or any preamble in your response
+ If any diagram content is generated, Return only a valid Mermaid code block (must pass mermaid.parse()). Before generating a diagram, first identify its specific type. Then, strictly apply only the syntax appropriate for that single type. Wrap all `subgraph` titles in double quotes (e.g. `subgraph "title (data)"`). Wrap any `node`/`edge`/`link` labels with special characters in double quotes. Inside quoted labels, encode only double quotes as `&quot;`. Use pipe link syntax with no extra spaces: `A -->|"label"| B`, `A -.->|"label"| B`, `A ==>|"label"| B`. Do not insert spaces before or after the first pipe; no leading/trailing spaces inside the label. Make to use only valid links . Place all Mermaid comments (`%%`) at the start of a new line.
 </Quality Checks>"""
 
 
